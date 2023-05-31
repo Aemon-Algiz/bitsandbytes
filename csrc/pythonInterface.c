@@ -356,7 +356,6 @@ extern "C"
 
 	void cprefetch(void *ptr, size_t bytes, int device)
 	{
-		CUDA_CHECK_RETURN(cudaMemPrefetchAsync(ptr, bytes, device, 0));
 		CUDA_CHECK_RETURN(cudaPeekAtLastError());
 	}
 
